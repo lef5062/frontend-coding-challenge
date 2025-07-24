@@ -23,5 +23,6 @@
     "eslint": "^9",
     "eslint-config-next": "15.4.4",
     "@eslint/eslintrc": "^3"
-  }
+  },
+  "packageManager": "pnpm@8.10.0+sha1.77d568bacf41eeefd6695a7087c1282433955b5c"
 }
