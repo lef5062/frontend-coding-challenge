@@ -23,7 +23,7 @@ export default function CryptoList({ cryptoList, loading }: CryptoListProps) {
                         <h3 className="font-semibold mb-1">
                             {crypto.name} ({crypto.symbol})
                         </h3>
-                        <p>Price: ${crypto.price}</p>
+                        <p>Price: ${crypto.price.toFixed(2)}</p>
                     </div>
                 ))
             )}

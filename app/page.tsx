@@ -9,7 +9,7 @@ export default function Home() {
   const [cryptoList, setCryptoList] = useState<{ name: string; symbol: string; price: number }[]>([]);
   const [loading, setLoading] = useState(true);
   const [secondsLeft, setSecondsLeft] = useState(10);
-  const [buyAmount, setBuyAmount] = useState("");
+  const [buyAmount, setBuyAmount] = useState<string>("");
   const [selectedCrypto, setSelectedCrypto] = useState("BTC");
 
   async function loadCrypto(showLoading = false) {
@@ -40,7 +40,7 @@ export default function Home() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    postCrypto(buyAmount, selectedCrypto);
+    postCrypto(Number(buyAmount), selectedCrypto);
     setBuyAmount("");
     setSelectedCrypto("BTC");
   }
