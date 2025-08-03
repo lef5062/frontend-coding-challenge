@@ -1,8 +1,22 @@
+interface CryptoItem {
+    name: string;
+    symbol: string;
+    quote: {
+        USD: {
+            price: number;
+        };
+    };
+}
+
+interface CryptoApiResponse {
+    data: CryptoItem[];
+}
+
 export async function fetchCrypto(limit: number = 10) {
     try {
         const response = await fetch(`/api/crypto?limit=${limit}`);
-        const data = await response.json();
-        const simplifiedData = data?.data?.map((crypto: any) => ({
+        const data: CryptoApiResponse = await response.json();
+        const simplifiedData = data?.data?.map((crypto) => ({
             name: crypto.name,
             symbol: crypto.symbol,
             price: Number(crypto.quote.USD.price).toFixed(2),
