@@ -19,7 +19,7 @@ export async function fetchCrypto(limit: number = 10) {
         const simplifiedData = data?.data?.map((crypto) => ({
             name: crypto.name,
             symbol: crypto.symbol,
-            price: Number(crypto.quote.USD.price).toFixed(2),
+            price: Math.round(Number(crypto.quote.USD.price) * 100) / 100,
         }));
 
         simplifiedData.sort((a: { name: string }, b: { name: string }) =>
