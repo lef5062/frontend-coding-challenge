@@ -18,4 +18,4 @@ To learn more about Next.js, take a look at the following resources:
 
 ## Deploy on Vercel
 
-Project is deployed on Vercel and can be viewed here: https://frontend-coding-challenge-kghamrrng-lef5062s-projects.vercel.app/
+Project is deployed on Vercel and can be viewed here: https://frontend-coding-challenge-mu.vercel.app/
